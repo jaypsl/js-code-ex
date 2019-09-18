@@ -1,0 +1,62 @@
+﻿body {
+  background-color: #4e504d;
+  color: #fff;
+}
+#app {
+  width: 50%;
+  margin: 0 auto;
+}
+.user {
+  border: 1px solid #c3c3c3;
+  border-radius: 7px;
+  padding: 10px;
+  margin: 10px auto;
+  color: #000;
+  background-color: #fff;
+}
+.user:after {
+  display: block;
+  content: ' ';
+  clear: both;
+}
+.left {
+  float: left;
+}
+.action-buttons {
+  float: right;
+}
+p {
+  margin: 5px auto;
+}
+img {
+  height: 130px;
+  width: 130px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 65px;
+}
+.user:nth-child(2n) > img {
+  float: right;
+}
+.user:nth-child(2n) .action-buttons {
+  float: left;
+}
+
+.details {
+  display: none;
+}
+
+button {
+  border: 1px solid #fff;
+  background-color: #2ac4ea;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button.danger {
+  background-color: #ee4b4d;
+}
