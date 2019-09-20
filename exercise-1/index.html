@@ -5,16 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Exercise 1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./styles/main.css" />
-    
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/main.css"
+    />
   </head>
   <body>
     <div id="app">
       <h1>Exercise 1</h1>
       <div id="results" class="flex"></div>
-      </div>
+    </div>
     <script src="./libs/handlebars.min.js"></script>
     <script src="./libs/jquery.min.js"></script>
+    <script id="user" type="text/x-handlebar-template">
+      {{#each users}}
+      <div class='user'>
+        <img src="{{ avatar }}" alt="" />
+        <div>
+          <h2>{{ name }}</h2>
+          <div class='details'>
+              <p>ID: {{ id }}</p>
+              <p>Created At: {{formatDate createdAt }}</p>
+          </div>
+          <div class='action-buttons'>
+              <button class="show-details">Show Details</button>
+              <button class="delete danger">Delete</button>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </script>
     <script src="./js/app.js"></script>
   </body>
 </html>
